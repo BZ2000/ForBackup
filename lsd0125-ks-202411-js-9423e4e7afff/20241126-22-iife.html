@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- pre 會忠實呈現空白字元和換行 tab -->
+    <pre id="info"></pre>
+
+    <script>
+      // 內層 scope 找不到時, 會往外層找
+      const ar = [4, 5, 6];
+      const br = [1, 2, 3];
+      (function () {
+        const ar = [9, 8, 7];
+        console.log(1, { ar, br });
+
+        (function () {
+          const br = [2, 2, 16];
+          console.log(2, { ar, br });
+        })();
+      })();
+
+      console.log(3, { ar, br });
+    </script>
+  </body>
+</html>

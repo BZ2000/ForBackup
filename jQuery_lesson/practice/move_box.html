@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>move_box</title>
+    <style>
+    .box{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: blueviolet;
+    top: calc((100% - 50px)/2);
+    left: calc((100% - 50px)/2);
+    }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script> 
+    $(function(){
+        let top_pos = parseInt($('.box').css('top'));
+        let left_pos = parseInt($('.box').css('left'));
+        $('body').on("keyup", function(event){
+        console.log(event.keyCode);
+        // if(event.keyCode == 87){dawdsa
+        // } else if(event.keyCode == 65){
+        // } else if(event.keyCode == 83){
+        // } else if(event.keyCode == 68){
+        // }
+        //取得目前box的top跟left位置
+        //當鍵盤按下時，按w時，top -100px，按s時，top +100px，按a時，left -100px，按d時，left +100px
+        switch(event.keyCode){
+            case 87:
+            top_pos = top_pos - 30;
+            break;
+            case 65:
+            left_pos = left_pos - 30;
+            break;
+            case 83:
+            top_pos = top_pos + 30;
+            break;
+            case 68:
+            left_pos = left_pos + 30;
+            break;
+        }
+        //將位置套用到box上
+        $('.box').css({
+            'top': top_pos + 'px',
+            'left': left_pos + 'px'
+        });
+        });
+    });
+    </script>
+</body>
+</html>

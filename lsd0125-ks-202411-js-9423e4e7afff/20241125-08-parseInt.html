@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script>
+      let a = "123.45xyz";
+
+      let b = 100000000000000000000000000000000000000;
+
+      console.log(parseInt(a)); // 123
+      console.log(parseFloat(a)); // 123.45
+      // parseInt(), parseFloat() 是用來解析 "字串" 轉換成數值
+      console.log(parseInt(b)); // 相當於 parseInt('1e38'), 結果為 1
+      console.log(parseFloat(b));
+      console.log(+a); // NaN
+      console.log(Number(a)); // NaN
+    </script>
+  </body>
+</html>

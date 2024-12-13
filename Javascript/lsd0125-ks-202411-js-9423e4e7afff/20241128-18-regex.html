@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 統一發票格式
+      const pattern = /^[a-z]{2}\d{8}$/i;
+
+      const ar = ["HJHJ7658785395873", "YU38943539", "HT28734287462"];
+
+      for (let v of ar) {
+        if (pattern.test(v)) {
+          console.log(v, '有符合格式');
+        }
+      }
+    </script>
+  </body>
+</html>

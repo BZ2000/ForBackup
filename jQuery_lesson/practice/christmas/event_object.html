@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event物件</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <style>
+        .box{
+            width:500px;
+            height:500px;
+            background-color:tomato;
+            position: relative;
+        }
+        .circle{
+            width: 30px;
+            height:30px;
+            background-color:white;
+            border-radius: 50%;
+            top:10px;
+            left:10px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="box">
+            
+        </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            let i=0;
+            $('.box').on("click",function(event){
+                let x=event.pageX;
+                let y=event.pageY;
+                console.log("x=",x);
+                console.log("y=",y);
+                
+                $(this).append('<div class="circle"></div>');
+                $('.circle').eq(i).css({
+                    "top": x+"px",
+                    "left": y+"px"
+                })
+                i++;
+            })
+        })
+    </script>
+
+
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 行內的事件處理器, 是包在一個函式裡, 函式會接收一個參數 event -->
+    <div onclick="console.log(1, event)">ABC</div>
+
+    <script>
+      const div = document.querySelector("div");
+
+      // 會蓋掉行內的事件處理器
+      div.onclick = (e) => {
+        console.log(2, e);
+      };
+    </script>
+  </body>
+</html>

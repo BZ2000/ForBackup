@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetData</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        
+        <form action="" method="get" class="my-5 w-50">
+            <div id="drinks" class="mb-3">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>請選擇飲料</option>
+                </select>
+            </div>
+            <div class="mb-e">
+                <button class="btn btn-primary" type="submit">送出
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $.ajax({
+            url:'json/drink.json',
+            type:"get",
+            dataType:"json",
+            success: function(data){
+                $.each(data,function(i,item){
+                    console.log(item);
+                    $('.form-select').append(`<option value="${item.price}">${item.name}</option>`)
+                })
+            },
+            error: function(xhr,status,error){
+                console.log("Error:",error);
+            }
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        fieldset{
+            width:200px;
+            margin:15px;
+            border:1px solid #acd6ff;
+            border-radius: 15px;
+
+        }
+        .st1{
+            width:450px;
+            border-bottom: 3px dashed blueviolet;
+            margin: 20px;
+            padding-bottom: 4px;
+        }
+        .sub{
+            width: 450px;
+            margin: 20px;
+            text-align: center;
+        }
+        .t1{
+            width:100px;
+            /* border:1px red; */
+            float: left;
+            text-align: right;
+        }
+        textarea{
+            resize:none;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="#" method="get" enctycape="multipart/form-date">
+        <fieldset>
+        <div class="st1">
+             <label for ="account1" class="t1">姓名:</label><input type="text" id="account1"name="account" value="guest" size="10">
+    </div>
+    <div class="st1">
+        <label for="" class="t1">性別:</label>
+        <label >
+            <input type="radio" name="gender" value="male" id="" >男
+        </label>
+        <label >
+            <input type="radio" name="gender" value="female" id="" >女
+        </label>
+       
+    </div>
+    <div class="st1">
+        <label for ="pwd1" class="t1">密碼:</label><input type="password" id="pwd1" name="pwd" maxlength="6">
+    </div>
+</fieldset>
+<fieldset>
+    <div class="st1">
+        <label for="" class="t1">縣市:</label>
+        <select name = "add1" multiple>
+            <option value="TPE">台北市</option>
+            <option value="TPH" selected>新北市</option>
+            <option value="TYU">桃園市</option>
+            <option value="TPE">新竹市</option>
+        </select>
+    </div>
+    <div class="st1">
+        <label for="" class="t1">完整地址:</label>
+        <input type="text" name="add2" size="30" id="">
+    </div>
+    <div class="st1">
+        <label for="" class="t1">照片:</label>
+        <input type="file" name="file" id="" accept=".png,.jpg">
+    </div>
+    <div class="st1">
+        <label for="" class="t1">興趣:</label>
+        <label>
+            <input type="checkbox" name="hobby" value="movie" id="">電影
+        </label>
+        <label>
+            <input type="checkbox" name="hobby" value="music" id="">音樂
+        </label>
+        <label>
+            <input type="checkbox" name="hobby" value="sports" id="">運動
+        </label>
+        <label>
+            <input type="checkbox" name="hobby" value="travel" id="">旅遊
+        </label>
+    </div>
+    <div class="st1">
+        <label  for="comment1" class="t1">意見:</label><textarea name="comment" id="comment1" cols="40" rows="5" ></textarea>
+    </div>
+    <div class="sub">
+        <input type="submit" value="送出">
+        <input type="reset" value="清除">
+    </div>
+</fieldset>
+
+    
+        
+
+        
+    </form>
+</body>
+</html>

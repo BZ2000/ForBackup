@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      b {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script>
+      const ar = [3, 6, 7, 9, 11, 25, 16];
+
+      // ar[20] = 200; // 不要這樣用, 最好讓索引是連續的
+      for (let v of ar) {
+        if (v % 3 === 0) {
+          info.innerHTML += `<b>${v}</b><br>`;
+        } else {
+          info.innerHTML += `${v}<br>`;
+        }
+      }
+    </script>
+  </body>
+</html>

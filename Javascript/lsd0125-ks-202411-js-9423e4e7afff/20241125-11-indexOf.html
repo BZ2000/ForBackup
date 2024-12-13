@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script>
+      const str = "大聯盟官網大讚：歷史最偉大爆冷";
+      info.innerHTML = `${str}<br>`;
+      info.innerHTML += `str.indexOf('官網'): ${str.indexOf("官網")}<br>`;
+      info.innerHTML += `str.indexOf('大'): ${str.indexOf("大")}<br>`;
+      // 找不到時會得到 -1
+      info.innerHTML += `str.indexOf('火腿'): ${str.indexOf("火腿")}<br>`;
+
+      // 從某個索引值往後找
+      info.innerHTML += `str.indexOf('大', 1): ${str.indexOf("大", 1)}<br>`;
+      info.innerHTML += `str.indexOf('大', 6): ${str.indexOf("大", 6)}<br>`;
+      info.innerHTML += `str.lastIndexOf('大'): ${str.lastIndexOf("大")}<br>`;
+
+
+
+    </script>
+  </body>
+</html>

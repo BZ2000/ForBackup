@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="my_input" name="myInput" />
+
+    <script>
+      const my_input = document.querySelector("input");
+
+      const handler = (e) => {
+        const { key, keyCode, which, code, isComposing } = e;
+        console.log(e.type, { key, keyCode, which, code, isComposing });
+        // isComposing (keyup): 用來判斷是否正在組合 (用中文的輸入法) 一個字
+      };
+      // my_input.addEventListener("keydown", handler);
+      my_input.addEventListener("keyup", handler);
+
+      // keypress: 有輸出字元才會觸發
+      // my_input.addEventListener("keypress", handler);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info"></div>
+    <button onclick="stopInterval()">stop</button>
+
+    <script>
+      let n = 0;
+      const intervalId = setInterval(() => {
+        n++;
+        info.innerHTML = n;
+        console.log(new Date());
+        throw Error("1"); // 丟一個錯誤出來, 但不會讓 setInterval 停下來
+      }, 500);
+
+      const stopInterval = () => {
+        clearInterval(intervalId); // 停止編號為 intervalId 的計時器
+      };
+    </script>
+  </body>
+</html>

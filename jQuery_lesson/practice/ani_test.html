@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <style>
+        .box{
+            width:300px;
+            height:300px;
+            background: linear-gradient(0deg,rgba(34,193,195,1) 0%, rgba(40,107,237,1) 100%);
+
+
+
+
+        }
+        
+        .margin{
+
+            margin-top:30px;
+
+
+        }
+        .menu {
+        width: 50px;
+        height: 50px;
+        background-color: #f6d365;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .header{
+            background: #f0acac;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        
+        .navbar>ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        }
+        .navbar>ul>li{
+            background-color: palegoldenrod;
+            padding: 10px;
+            text-align: center;
+        }
+        .navbar>ul>li>a{
+            display: block;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        .menu-icon{
+            display: none;
+        }
+        /* 手機 */
+        @media screen and (max-width: 500px) {
+            .header{
+                flex-wrap: wrap;
+                align-items:stretch;
+            }
+            .menu-icon{
+                display: block;
+                background: #8b0f9f;
+                padding: 5px;
+                display: flex;
+                color: #fff;
+                font-family: 'Dosis';
+                justify-content: center;
+                align-items: center;
+            }
+            .navbar{
+                width: 100%;
+            }
+            .navbar>ul{
+                flex-direction: column;
+            }
+            .navbar>ul>li{
+                display: block;
+                background-color: rgb(238, 188, 96);
+                padding: 10px;
+                text-align: center;
+                border-bottom: 1px solid #333;
+                flex: 1 1 0%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href=""></a></div>
+        <div class="menu-icon">Menu</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="">Experience</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="button-group">
+        <button class="btn fadeIn">淡入</button>
+        <button class="btn fadeOut">淡出</button>
+        <button class="btn slideUp">Slideup</button>
+        <button class="btn slideDown">Slidedown</button>
+        <button class="btn menu">Menu</button>
+    </div>
+    <div class="box"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.box').hide();
+            $('.fadeIn').on("click",function(){
+                $('.box').fadeIn();
+            })
+            $('.fadeOut').on("click",function(){
+                $('.box').fadeOut();
+            })
+            $('.slideUp').on("click",function(){
+                $('.box').slideUp();
+            })
+            $('.slideDown').on("click",function(){
+                $('.box').slideDown();
+            })
+            $('.menu').on("click",function(){
+                $('.box').slideToggle();
+            })
+        })
+    </script>
+
+</body>
+</html>

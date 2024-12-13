@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>ABC</div>
+    <div>DEF</div>
+    <div>GHI</div>
+
+    <script>
+      const [d1, d2, d3] = document.querySelectorAll("div");
+
+      const handler = (e) => {
+        console.log(30);
+      };
+
+      d1.addEventListener("click", (e) => {
+        console.log(11);
+      });
+      d1.addEventListener("click", (e) => {
+        console.log(11);
+      });
+
+      d1.addEventListener("click", handler);
+      // 加入相同參照的函式時是沒有作用
+      d1.addEventListener("click", handler);
+      d1.addEventListener("click", handler);
+      d1.addEventListener("click", handler);
+      d1.addEventListener("click", handler);
+      d1.addEventListener("click", handler);
+
+      d2.addEventListener("click", handler);
+      d3.addEventListener("click", handler);
+    </script>
+  </body>
+</html>

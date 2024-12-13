@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const ar = [2, 4, 6, { a: 1 }, { b: 2 }];
+
+      ar.forEach(function (value, index, array) {
+        console.log({ value, index, array });
+      });
+
+      // functional programming
+      ar.forEach(function (v) {
+        console.log(v);
+      });
+    </script>
+  </body>
+</html>

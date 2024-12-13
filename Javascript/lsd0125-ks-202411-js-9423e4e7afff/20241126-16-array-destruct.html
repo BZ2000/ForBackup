@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const ar = [2, 4, 6, 7, 9];
+
+      const [a, b] = ar; // 解構賦值
+      console.log({ a, b });
+
+      const [c, ...d] = ar; // rest operator, 其餘運算子
+      console.log({ c, d });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: rgb(248, 232, 232);
+        border: 1px solid black;
+      }
+      .ball {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: rgb(54, 142, 219);
+        left: 100px;
+        top: 50px;
+        border: 1px solid black;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rect"><div class="ball"></div></div>
+    <script>
+      const rect = document.querySelector(".rect");
+      const ball = document.querySelector(".ball");
+
+      const handler = (event) => {
+        console.log("target:", event.target);
+        console.log("currentTarget:", event.currentTarget);
+        console.log("eventPhase:", event.eventPhase);
+      };
+
+      rect.addEventListener("click", handler, true);
+      ball.addEventListener("click", handler, true);
+      window.addEventListener("click", handler, true);
+      document.addEventListener("click", handler, true);
+      /*
+        1. capturing
+        2. at target
+        3. bubbling
+      */
+    </script>
+  </body>
+</html>

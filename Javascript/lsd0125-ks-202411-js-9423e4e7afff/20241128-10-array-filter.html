@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info"></div>
+    <p>---------------------------</p>
+    <div id="info2"></div>
+
+    <script>
+      const ar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 12];
+
+      // 篩選陣列裡項目
+      const ar2 = ar.filter((v) => {
+        // 回傳 truthy 表示該項目要保留
+        return v % 3 === 0;
+      });
+
+      // 項目的 "對應"
+      const ar3 = ar.map((v) => {
+        // 回傳項目 "對應" 的格式
+        return v * v;
+      });
+
+      console.log("ar:", ar);
+      console.log("ar2:", ar2);
+      console.log("ar3:", ar3);
+
+      info.innerHTML = ar
+        .map((v) => {
+          if (v % 3 === 0) {
+            return `<div><b>${v}</b></div>`;
+          }
+          return `<div>${v}</div>`;
+        })
+        .join("");
+
+      info2.innerHTML = ar
+        .filter((v) => {
+          return v % 3 === 0;
+        })
+        .map((v) => {
+          return `<div>${v}</div>`;
+        })
+        .join("");
+    </script>
+  </body>
+</html>

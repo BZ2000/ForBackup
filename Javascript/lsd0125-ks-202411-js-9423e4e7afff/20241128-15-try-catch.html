@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const str = '{"name":"peter",}';
+      let obj = {};
+      try {
+        obj = JSON.parse(str);
+      } catch (ex) {
+        console.log("出錯了", ex);
+      }
+
+      console.log(obj);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增/移除圖片</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container pt-5">
+        <div id="img-box" class="container p-3 border">
+            <img src="./imgs/christmas-bell.png" alt="" class="pic me-3">
+        </div>
+        <div class="container p-3">
+            <button id="add" class="btn btn-primary">新增圖片</button>
+            <button id="remove" class="btn btn-danger">移除圖片</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $(function(){
+        let img_array=['christmas-bell.png','christmas-lights.png','snowman.png','mistletoe.png','presents.png'];
+        let index=0;
+        console.log(img_array[2])
+        $('#add').on("click",function(){
+            $('#img-box').append(`<img src="./imgs/${img_array[index]}" alt="" class="pic me-3">`)
+            index++;
+            if(index>4){
+                index=0;
+            }
+        })
+        $('#remove').on("click",function(){
+            let len = $('.pic').length
+            console.log(len)
+            $('.pic').eq(len-1).remove();
+        })
+    })
+
+</script>
+
+</body>
+</html>

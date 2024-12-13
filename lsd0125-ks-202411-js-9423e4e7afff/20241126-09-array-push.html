@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      b {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script>
+      const ar = [];
+      const ar2 = [];
+
+      for (let i = 1; i <= 10; i++) {
+        ar.push(i ** 2);
+      }
+      info.innerHTML += ar + "<br>";
+      for (let i = 1; i <= 10; i++) {
+        ar2.push({ i });
+      }
+      // Object 個體轉換成字串 '[object Object]'
+      info.innerHTML += ar2 + "<br>";
+
+      ar.sort(); // 預設的排序, 以字串的方式來排
+      info.innerHTML += ar + "<br>";
+
+      const ar3 = [..."可顯示字元也稱為可列印字元，其編號範圍"];
+      ar3.sort();
+      info.innerHTML += ar3 + "<br>";
+    </script>
+  </body>
+</html>

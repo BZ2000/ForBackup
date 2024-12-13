@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script>
+      const p1 = { name: "David", age: 27, gender: "男生" };
+
+      for (let s in p1) {
+        info.innerHTML += `${s}: ${p1[s]}<br>`;
+      }
+
+      console.log("name" in p1); // 判斷某個字串是不是 Object 裡的 key
+      console.log("David" in p1); // "David" 不是 key
+    </script>
+  </body>
+</html>

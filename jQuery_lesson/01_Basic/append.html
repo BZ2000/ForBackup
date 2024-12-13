@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習使用append</title>
+</head>
+<body>
+    <p>今天天氣很好</p>
+    <div id="box">
+        <!-- <a href="https://www.google.com">Google</a> -->
+    </div>
+    <ul id="menu">
+        <li>About</li>
+        <li>Portfolio</li>
+        <li>Contact</li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // 在所有段落元素後面添加一個新的 div 元素
+            $("p").append("<div>我是新元素</div>");
+            $('#box').append('<a href="https://www.google.com">Google</a>');
+
+
+            $('#box').append('<ul id="menu"><li>About</li><li>Portfolio</li><li>Contact</li></ul>');
+            // 刪除所有段落元素
+            // $("p").remove();
+            $('#box').html('<a href="">Google</a>');
+            $('#box').append('<ul id="menu"><li>About</li><li>Portfolio</li><li>Contact</li></ul>');
+            // 試著在menu後面增加一個h1標題叫Product
+            $("#menu").append("<h1>Product</h1>");
+            // 試著移除menu選單
+            $("#menu").remove();
+            //將facebook連結不要底線，顏色改為tomato
+            $('#link a:nth-child(2)').css({
+                "text-decoration":"none",
+                "color":"red"
+            })
+            //將Menu底下portfolio文字大小改為30px
+            $('Menu li').eq(1).css("font-size","30px")
+        });
+    </script>
+</body>
+</html>

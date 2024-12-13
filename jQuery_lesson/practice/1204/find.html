@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <style>
+        #circle-group{
+            width:150px;
+            display:flex;
+            justify-content: space-evenly;
+        }
+        .circle{
+            width:30px;
+            height:30px;
+            background-color: cornflowerblue;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<ul class="menu">
+    <li>
+        <a href="">
+            <p>About</p>
+        </a>
+    </li>
+    <li>
+        <a href="">
+            <p>Products</p>
+        </a>
+    </li>
+    <li>
+        <a href="">
+            <h3 class="tag">Sale</h3>
+        </a>
+    </li>
+    <li>
+        <a href="">
+            Contact
+        </a>
+    </li>
+</ul>
+<div id="circle-group">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</div>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.menu').find('a').css({
+                "color":"red",
+                "text-decoration":"none"
+
+            })
+            $('.menu').children().css({
+                "background-color":"pink"
+            })
+            $('#circle-group').children().eq(1).css({
+                "background-color":"green"
+            })
+        })
+    </script>
+    
+</body>
+</html>

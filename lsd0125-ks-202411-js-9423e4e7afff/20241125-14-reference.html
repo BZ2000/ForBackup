@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="info">123</div>
+
+    <script>
+      const el = document.querySelector("#info"); // 取得參照 (reference)
+      const el2 = el; // 設定參照
+      el2.innerHTML = "ABC";
+
+      let a = 10;
+      let b = a; // 設定值
+      b = 5;
+      console.log(a);
+    </script>
+  </body>
+</html>

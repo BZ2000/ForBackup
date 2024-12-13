@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move block</title>
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+            background-color: tomato;
+            position: relative;
+            transition: all 0.3s;
+        }
+        #move{
+            width:100px;
+            height:40px;
+            background-color: blue;
+            margin-top: 20px;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        .small-box{
+            width: 100px;
+            height: 100px;
+            background: green;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        img{
+            width:100%;
+        }
+        .content{
+            width:100%;
+            display:none;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div id="move">移動方塊</div>
+    <div class="small-box">
+        <div class="content">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/027/448/968/small_2x/123-number-icon-one-two-and-three-symbol-in-flat-style-vector.jpg" alt=""><p>11111111 1111111111111111111111111111 11111111111111111111111111 111111111 11111111 111111111111111111111 111111 1111111111111</p>
+        <ul class="menu"> 
+            <li><a href="">About</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Detail</a></li>
+        </ul>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#move').on("click",function(){
+                $('.box').css({
+                "margin-left":"200px",
+                "background":"purple"
+            })
+            });
+        
+        $('.small-box').on('mouseenter',function(){
+            $(this).css({
+                "width":"300px",
+                "height":"500px"
+            })
+            $('.content').css("display","block");
+        }).on("mouseleave",function(){
+            $(this).css({
+                "width":"40px",
+                "height":"40px"
+            })
+            $('.content').css("display","none");
+        })
+    })
+    </script>
+</body>
+</html>

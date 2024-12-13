@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function f1(a, b) {
+        let t = a;
+        a = b;
+        b = t;
+        console.log({ a, b });
+      }
+
+      let c = 10,
+        d = 25;
+
+      f1(c, d);
+      console.log({ c, d }); // c, d 的值不會對調
+
+      function f2(ar) {
+        ar.pop();
+      }
+      const ar2 = [3, 4, 5];
+      f2(ar2);
+      console.log(ar2);
+    </script>
+  </body>
+</html>

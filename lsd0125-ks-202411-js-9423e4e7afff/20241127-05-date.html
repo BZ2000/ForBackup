@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info"></div>
+    <script>
+      const now = new Date(); // 當下時間
+
+      info.innerText += now.getTime() + "\n"; // 取得 timestamp (單位是 milli-seconds)
+      info.innerText += Date.now() + "\n"; // 取得 timestamp (單位是 milli-seconds)
+
+      const t1 = new Date(1732671993518);
+      const t2 = new Date(2024, 10, 27); // 中間的月份的索引
+      const t3 = new Date(2024, 10, 27, 12, 13, 14);
+      const t4 = new Date('2024-11-27'); // 會看成是標準時間
+      const t5 = new Date('2024-11-27 09:50:01');
+      info.innerText += `t1: ${t1}\n`;
+      info.innerText += `t2: ${t2}\n`;
+      info.innerText += `t3: ${t3}\n`;
+      info.innerText += `t4: ${t4}\n`;
+      info.innerText += `t5: ${t5}\n`;
+    </script>
+  </body>
+</html>

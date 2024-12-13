@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖片切換</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <style>
+        .container {
+            width: 50%;
+        }
+        .circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgb(243, 242, 242);
+            border: 1px solid rgb(207, 199, 199);
+            transition: all 0.3s;
+        }
+        .img-box {
+            width: 400px;
+            text-align: center;
+            margin: auto;
+            transition: transform 0.3s ease;
+        }
+        #circle-group {
+            width: 150px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .active {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgb(161, 159, 159);
+            border: 1px solid rgb(207, 199, 199);
+            box-shadow: 0px 0px 3px 0px rgba(82, 81, 81, 0.75);
+        }
+        .btn {
+            border-radius: 15px;
+            background: rgba(236, 116, 116, 0.849);
+            border: none;
+        }
+        .btn:hover {
+            background-color: rgb(226, 57, 57);
+        }
+        .img-box img:hover {
+            transform: scale(1.1);
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <div class="img-box">
+            
+            <img src="./imgs/christmas-bell.png" alt="" id="current-img">
+        </div>
+        <div class="d-flex justify-content-around mt-5">
+            <button class="btn btn-secondary" id="prev">上一張</button>
+            <div id="circle-group"></div>
+            <button class="btn btn-secondary" id="next">下一張</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="img">
+            <img class="example" src="./imgs/christmas-bell.png"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./hover-extended-magnify/extm.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.example').extm({
+                position: 'right',
+                rightPad: 20,
+                zoomSize: 1000,
+            });
+            let imgs = [
+                "./imgs/christmas-bell.png",
+                "./imgs/christmas-lights.png",
+                "./imgs/presents.png",
+                "./imgs/mistletoe.png",
+                "./imgs/snowman.png"
+            ];
+            let len = imgs.length;
+
+            // 增加小圓點
+            for (let i = 0; i < len; i++) {
+                $("#circle-group").append(`<div class="circle"></div>`);
+            }
+
+            let index = 0;
+            $("#circle-group .circle").eq(index).addClass("active");
+
+            function updateImage() {
+                $(".img-box img").attr("src", imgs[index]);
+                $("#circle-group .circle").removeClass("active");
+                $("#circle-group .circle").eq(index).addClass("active");
+            }
+
+            $("#next").on("click", function () {
+                index++;
+                if (index >= len) {
+                    index = 0;
+                }
+                updateImage();
+            });
+
+            $("#prev").on("click", function () {
+                index--;
+                if (index < 0) {
+                    index = len - 1;
+                }
+                updateImage();
+            });
+
+            setInterval(function () {
+                index++;
+                if (index >= len) {
+                    index = 0;
+                }
+                updateImage();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

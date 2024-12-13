@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="rect"></div>
+    <script>
+        const rect = document.querySelector(".rect");
+        for(let i =0;i<10;i++){
+            const b =document.createElement("div");
+            b.innerHTML=i+1;
+            b.className="ball";
+
+            b.style.left=i*6-+"px";
+            b.style.top=i*20+"px";
+
+            rext.append(b);
+            
+        }
+    </script>
+</body>
+</html>

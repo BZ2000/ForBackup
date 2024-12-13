@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: white;
+        border: 1px solid black;
+      }
+      .ball {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(245, 52, 52);
+        color: white;
+        font-weight: 800;
+        line-height: 50px;
+        text-align: center;
+        border: 1px solid gray;
+        left: 375px;
+        top: 275px;
+        transition: 400ms;
+      }
+
+      .big-ball {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: blue;
+        color: white;
+        font-weight: 800;
+        line-height: 70px;
+        text-align: center;
+        border: 1px solid gray;
+        left: 365px;
+        top: 265px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rect">
+      <div class="big-ball" onclick="toggleMenu()"></div>
+    </div>
+    <script>
+      let isOpened = false; // 一開始是收起來的
+      const btnData = [];
+      const rect = document.querySelector(".rect");
+      const bigBtn = document.querySelector(".big-ball");
+
+      const ballNum = 12;
+      const angUnit = (2 * Math.PI) / ballNum;
+
+      for (let i = 0; i < ballNum; i++) {
+        const b = document.createElement("div");
+        b.className = "ball"; // 使用 className
+        b.innerHTML = i + 1;
+        const bx = 375;
+        const by = 275;
+        const ex = 400 - 25 + Math.floor(260 * Math.cos(angUnit * i));
+        const ey = 300 - 25 + Math.floor(260 * Math.sin(angUnit * i));
+        btnData.push({ b, bx, by, ex, ey });
+
+        rect.append(b);
+      }
+      rect.append(bigBtn); // 放到最上層
+
+      const toggleMenu = () => {
+        isOpened = !isOpened;
+
+        // 接收參數時就做解構 { b, bx, by, ex, ey }
+        btnData.forEach(({ b, bx, by, ex, ey }, i) => {
+          setTimeout(() => {
+            let x, y;
+            if (isOpened) {
+              x = ex;
+              y = ey;
+            } else {
+              x = bx;
+              y = by;
+            }
+            b.style.left = `${x}px`;
+            b.style.top = `${y}px`;
+          }, 100 * i);
+        });
+      };
+    </script>
+  </body>
+</html>

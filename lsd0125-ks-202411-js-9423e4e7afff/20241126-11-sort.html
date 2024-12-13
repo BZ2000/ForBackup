@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      b {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script>
+      const br = [35, 6, 78, 12, 54, 9];
+      info.innerHTML += `${br}<br>`;
+
+      // br.sort(); // 預設的排序(字串)
+      // info.innerHTML += `${br}<br>`;
+
+      // 自訂排序
+      br.sort(function (a, b) {
+        console.log({ a, b });
+        return a - b; // 看成數值, 由小排到大
+      });
+      info.innerHTML += `${br}<br>`;
+
+      // 自訂排序
+      br.sort(function (a, b) {
+        return b - a; // 由大排到小
+      });
+      info.innerHTML += `${br}<br>`;
+    </script>
+  </body>
+</html>

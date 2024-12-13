@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表單事件</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container pt-5">
+    <form action="jq01.html" id="MyForm">
+      <div class="mb-3">
+        <label for="Name" class="form-label">姓名:</label>
+        <input type="text" class="form-control" id="Name">
+        <div class="invalid-feedback">
+          請輸入姓名
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="Email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="Email" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <select class="form-select" aria-label="水果清單">
+          <option selected>請選擇水果</option>
+          <option value="蘋果1">蘋果</option>
+          <option value="香蕉2">香蕉</option>
+          <option value="橘子3">橘子</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="Msg" class="form-label">留言</label>
+        <textarea class="form-control" id="Msg" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <input type="submit" class="btn btn-primary form-control" id="Submit" value="送出">
+      </div>
+    </form>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('#Name,#Email').on("change", function(){
+        console.log($(this).val());
+      })
+      $('.form-select').on("change", function(){
+        console.log($(this).val());
+      })
+      // 當焦點在email欄位，而姓名無資料時，出現姓名的invalid-feedback
+      $('#Email, #Msg').on("focus", function(){
+        if($('#Name').val() == ''){
+          $('.invalid-feedback').show();
+        }else{
+          $('.invalid-feedback').hide();
+        }
+      })
+      $('#Name').on('keyup', function(){
+          $('.invalid-feedback').hide();
+      }).on('blur', function(){
+        // 當姓名欄位失去焦點卻又無資料時，出現提示
+        if($('#Name').val() == ''){
+          $('.invalid-feedback').show();
+        }
+      })
+      $('#MyForm').on("submit", function(){
+        // 送出前會先處理此處的程式
+        alert('您選擇的水果是'+ $('.form-select :selected').text());
+      })
+    })// end function
+  </script>
+</body>
+</html>

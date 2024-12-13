@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ES5 嚴謹模式, 使用的變數一定要宣告
+      "use strict";
+      let a = 10;
+
+      let alert = "不會自動變成 window 的屬性";
+      console.log(alert);
+      console.warn(alert);
+      console.error(alert);
+
+      window.alert("原本的功能還在");
+    </script>
+  </body>
+</html>

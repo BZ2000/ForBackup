@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: rgb(248, 232, 232);
+        border: 1px solid black;
+      }
+      .ball {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgb(219, 159, 54);
+        border: 1px solid black;
+        pointer-events: none; /* 不感應任何滑鼠的動作 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rect"></div>
+    <button onclick="loadData()">load</button>
+
+    <script>
+      const rect = document.querySelector(".rect");
+      let data = [];
+
+      const loadData = () => {
+        const myData = localStorage.getItem("my-draw");
+        if (myData) {
+          data = JSON.parse(myData);
+          console.log(data);
+          renderDraw();
+        }
+      };
+
+      const renderDraw = () => {
+        data.forEach(({ x, y, c, s }, i) => {
+          setTimeout(() => {
+            const b = document.createElement("div");
+            b.className = "ball";
+            b.style.left = `${x}px`;
+            b.style.top = `${y}px`;
+            b.style.width = `${s}px`;
+            b.style.height = `${s}px`;
+            b.style.backgroundColor = c;
+            rect.append(b);
+          }, 10 * i);
+        });
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      b {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script>
+      const ar = [];
+      for (let i = 0; i <= 10; i++) {
+        ar.push(i);
+      }
+      let br = [...ar]; // 複製
+      info.innerHTML += `${br}<br>`;
+
+      info.innerHTML += `${br.splice(2, 3)}<br>`; // 移出
+      info.innerHTML += `${br}<br>`;
+      info.innerHTML += `-----------------------<br>`;
+      br = [...ar];
+      info.innerHTML += `${br.splice(2, 0, "a", "b")}<br>`; // 插入元素
+      info.innerHTML += `${br}<br>`;
+      info.innerHTML += `-----------------------<br>`;
+      br = [...ar];
+      info.innerHTML += `${br.splice(2, 3, "a", "b", "c")}<br>`; // 取代元素
+      info.innerHTML += `${br}<br>`;
+    </script>
+  </body>
+</html>

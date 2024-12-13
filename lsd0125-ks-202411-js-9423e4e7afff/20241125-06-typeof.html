@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script>
+      let el = document.getElementById("info"); // 用 id 取得元素
+
+      let a = 10,
+        b;
+
+      el.innerHTML += "typeof a: " + typeof a + "<br>";
+      el.innerHTML += "typeof b: " + typeof b + "<br>";
+      el.innerHTML += "typeof true: " + typeof true + "<br>";
+      el.innerHTML += 'typeof "true": ' + typeof "true" + "<br>";
+      el.innerHTML += "typeof null: " + typeof null + "<br>";
+      el.innerHTML += "typeof el: " + typeof el + "<br>";
+      el.innerHTML += "el.constructor.name: " + el.constructor.name + "<br>";
+    </script>
+  </body>
+</html>

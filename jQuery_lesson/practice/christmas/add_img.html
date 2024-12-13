@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動態增加減少ICON練習</title>
+    <style>
+        .container {
+            width: 600px;
+            margin: 50px auto;
+
+        }
+
+        .button-group {
+            width: 200px;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* CSS */
+        .button-29 {
+            align-items: center;
+            appearance: none;
+            background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+            border: 0;
+            border-radius: 6px;
+            box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: "JetBrains Mono", monospace;
+            height: 48px;
+            justify-content: center;
+            line-height: 1;
+            list-style: none;
+            overflow: hidden;
+            padding-left: 16px;
+            padding-right: 16px;
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            transition: box-shadow .15s, transform .15s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            will-change: box-shadow, transform;
+            font-size: 18px;
+        }
+
+        .button-29:focus {
+            box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+        }
+
+        .button-29:hover {
+            box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+
+        .button-29:active {
+            box-shadow: #3c4fe0 0 3px 7px inset;
+            transform: translateY(2px);
+        }
+
+        /* CSS */
+        .button-75 {
+            align-items: center;
+            background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+            border: 0;
+            border-radius: 10px;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            font-family: "Codec cold", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            height: 54px;
+            justify-content: center;
+            letter-spacing: .4px;
+            line-height: 1;
+            max-width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 3px;
+            text-decoration: none;
+            text-transform: uppercase;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+
+        }
+
+        .button-75:active {
+            outline: 0;
+        }
+
+        .button-75:hover {
+            outline: 0;
+        }
+
+        .button-75 span {
+            transition: all 200ms;
+        }
+
+        .button-75:hover span {
+            transform: scale(.9);
+            opacity: .75;
+        }
+
+        @media screen and (max-width: 991px) {
+            .button-75 {
+                font-size: 15px;
+                height: 50px;
+            }
+
+            .button-75 span {
+                line-height: 50px;
+            }
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button-group">
+        <button id="Add" class="button-29">新增</button>
+        <button id="Remove" class="button-75">移除</button>
+    </div>
+    <div class="container">
+        <img src="imgs/christmas-bell.png" alt="">
+        <img src="imgs/mistletoe.png" alt="">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+
+        })
+    </script>
+</body>
+
+</html>

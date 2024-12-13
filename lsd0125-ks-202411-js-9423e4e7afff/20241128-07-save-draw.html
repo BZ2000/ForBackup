@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: rgb(248, 232, 232);
+        border: 1px solid black;
+      }
+      .ball {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgb(219, 159, 54);
+        border: 1px solid black;
+        pointer-events: none; /* 不感應任何滑鼠的動作 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rect"></div>
+    <button onclick="saveData()">儲存</button>
+
+    <script>
+      const rect = document.querySelector(".rect");
+      const data = [];
+
+      const randomRGB = () => {
+        let n = Math.floor(16777216 * Math.random());
+        return "#" + n.toString(16).padStart(6, "0");
+      };
+
+      const saveData = () => {
+        console.log(data);
+
+        localStorage.setItem('my-draw', JSON.stringify(data))
+      };
+
+      const mDown = (e) => {
+        // 註冊事件處理器
+        rect.addEventListener("mousemove", mMove);
+      };
+      const mUp = (e) => {
+        // 解除事件處理器
+        rect.removeEventListener("mousemove", mMove);
+      };
+
+      const mMove = (e) => {
+        const b = document.createElement("div");
+        b.className = "ball";
+        const size = 10 + Math.floor(21 * Math.random());
+        const color = randomRGB();
+        const x = e.offsetX - 10;
+        const y = e.offsetY - 10;
+
+        b.style.left = `${x}px`;
+        b.style.top = `${y}px`;
+        b.style.width = `${size}px`;
+        b.style.height = `${size}px`;
+        b.style.backgroundColor = color;
+        rect.append(b);
+        data.push({
+          x,
+          y,
+          s: size,
+          c: color,
+        });
+      };
+
+      rect.addEventListener("mousedown", mDown);
+      window.addEventListener("mouseup", mUp);
+    </script>
+  </body>
+</html>

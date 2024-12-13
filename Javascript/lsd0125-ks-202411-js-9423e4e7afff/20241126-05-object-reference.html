@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script>
+      const p1 = { name: "David", age: 27, gender: "男生" };
+      console.log(p1);
+      p1.age = 32; // const 就是不能用 = 重新設定
+      console.log(p1); // 在 console 轉開三角形查看時, 會去呈現 "當下" 物件的狀態
+
+      const p2 = p1; // 設定參照, 指到相同的物件
+      console.log(p1 === p2);
+
+      const a1 = {};
+      const a2 = {};
+      console.log(a1 == a2); // 不一樣的參照
+      console.log(a1 === a2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: rgb(248, 232, 232);
+        border: 1px solid black;
+      }
+      .ball {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #666666;
+        color: white;
+        font-weight: 800;
+        line-height: 50px;
+        text-align: center;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rect"></div>
+    <script>
+      const rect = document.querySelector(".rect");
+
+      const t = new Date();
+      t.setDate(1); // 設定成當月的 1 號
+
+      const day1 = t.getDay();
+      console.log({ day1 });
+
+      for (let i = 0; i < 30; i++) {
+        const x = ((i + day1) % 7) * 60; // 水平方向位置
+        const y = parseInt((i + day1) / 7) * 60; // 垂直方向位置
+
+        const b = document.createElement("div");
+        b.innerHTML = i + 1;
+        b.className = "ball"; // 使用 className
+
+        // 設定行內的 CSS
+        b.style.left = `${x}px`;
+        b.style.top = `${y}px`;
+        if ((i + day1) % 7 === 0) {
+          // sunday
+          b.style.backgroundColor = "darkred";
+        }
+
+        rect.append(b); // 把建立好的元素放到 DOM 裡面, 從後面放進來
+      }
+    </script>
+  </body>
+</html>

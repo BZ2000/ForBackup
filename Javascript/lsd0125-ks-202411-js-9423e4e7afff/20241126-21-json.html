@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- pre 會忠實呈現空白字元和換行 tab -->
+    <pre id="info"></pre>
+
+    <script>
+      const p1 = { name: "david" };
+      const p2 = { name: "john" };
+      const p3 = { name: "bill" };
+
+      p1.next = p2;
+      p2.next = p3;
+      p3.next = p1;
+
+      // circular structure, 循環的結構不能轉換成 json 字串
+      // info.innerHTML = JSON.stringify(p1, null, 4);
+
+      console.log(p1);
+    </script>
+  </body>
+</html>

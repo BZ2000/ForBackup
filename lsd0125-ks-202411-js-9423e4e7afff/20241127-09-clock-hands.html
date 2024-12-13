@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .clock {
+        position: relative;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        border: 1px solid gray;
+        background-color: #ceedf7;
+      }
+      .hand {
+        position: absolute;
+        left: 300px;
+        top: 300px;
+        /* transition: 1s linear; */
+      }
+      .sec-hand {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-image: url(imgs/mario.gif);
+        background-size: cover;
+        left: -40px;
+        top: -300px;
+        /*
+        
+        width: 2px;
+        height: 280px;
+        background-color: red;
+        left: -1px;
+        top: -280px;
+        */
+      }
+      .min-hand {
+        position: absolute;
+        border-radius: 6px;
+        width: 12px;
+        height: 220px;
+        background-color: rgb(39, 77, 225);
+        left: -6px;
+        top: -214px;
+      }
+      .hr-hand {
+        position: absolute;
+        border-radius: 10px;
+        width: 20px;
+        height: 180px;
+        background-color: rgb(26, 115, 24);
+        left: -10px;
+        top: -170px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="hand" id="hr_hand">
+        <div class="hr-hand"></div>
+      </div>
+      <div class="hand" id="min_hand">
+        <div class="min-hand"></div>
+      </div>
+      <div class="hand" id="sec_hand">
+        <div class="sec-hand"></div>
+      </div>
+    </div>
+
+    <script>
+      const sec_hand = document.querySelector("#sec_hand");
+      const min_hand = document.querySelector("#min_hand");
+      const hr_hand = document.querySelector("#hr_hand");
+
+      const runClock = () => {
+        const now = new Date();
+        const ms = now.getMilliseconds();
+        const s = now.getSeconds();
+        const m = now.getMinutes();
+        const h = now.getHours();
+        sec_hand.style.transform = `rotate(${s * 6 + 6e-3 * ms}deg)`;
+        min_hand.style.transform = `rotate(${m * 6}deg)`;
+        hr_hand.style.transform = `rotate(${h * 30 + m * 0.5}deg)`;
+
+        setTimeout(runClock, 30);
+      };
+      runClock();
+    </script>
+  </body>
+</html>

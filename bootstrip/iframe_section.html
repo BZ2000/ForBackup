@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe元素</title>
+    <style>
+        #iframe,
+        #code {
+            margin: auto;
+            width: 90%;
+            padding: 2% 0;
+            /* border: 1px solid gray; */
+        }
+
+        #iframe .wrapper {
+            width: 100%;
+            overflow: auto;
+        }
+
+        #iframe .iframe_info {
+            width: 30%;
+            float: left;
+        }
+
+        #iframe .iframe_content {
+            width: 66%;
+            float: right;
+        }
+
+        iframe {
+            width: 100%;
+        }
+
+        #iframe hr,
+        #code hr {
+            width: 100%;
+            border: 2px dotted rgb(184, 174, 174);
+        }
+    </style>
+</head>
+
+<body>
+    <section id="code">
+        <h3>原始碼輸出</h3>
+        <!-- 請使用特殊字元修改以下原始碼 -->
+        <!-- <iframe src="https://www.ispan.com.tw" width="800" height="600"></iframe> -->
+        <hr>
+    </section>
+
+    <section id="iframe">
+        <div class="wrapper">
+            <div class="iframe_info">
+                <h3>資展國際網站</h3>
+            </div>
+            <div class="iframe_content">
+                <!-- 請在這裡輸入要嵌入的網站 -->
+
+            </div><!--end iframe_content-->
+        </div><!--end wrapper-->
+        <hr>
+    </section>
+
+    <section id="iframe">
+        <div class="wrapper">
+            <div class="iframe_info">
+                <h3>資展國際位置</h3>
+                <p>
+                    地址:台北市復興南路一段390號2樓<br>
+                    電話:(02)6631-6588<br>
+                    網址:<a href="http://www.iSpan.com.tw">www.iSpan.com.tw</a>
+                </p>
+            </div>
+            <div class="iframe_content">
+                <!-- 請在這裡嵌入地圖 -->
+
+            </div><!--end iframe_content-->
+        </div><!--end wrapper-->
+        <hr>
+    </section>
+
+    <section id="iframe">
+        <div class="wrapper">
+            <div class="iframe_info">
+                <h3>YouTube</h3>
+                <p>宮崎駿水晶音樂</p>
+            </div>
+            <div class="iframe_content">
+                <!-- 請在這裡嵌入YouTube -->
+
+            </div><!--end liframe_content-->
+        </div><!--end wrapper-->
+        <hr>
+    </section>
+
+</body>
+
+</html>

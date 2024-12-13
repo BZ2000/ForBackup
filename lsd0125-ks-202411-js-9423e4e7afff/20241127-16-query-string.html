@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <pre id="info"></pre>
+    <div>
+      <a href="?a=1&b=2">?a=1&b=2</a>
+    </div>
+    <div>
+      <a href="?name=Peter&age=27">?name=Peter&age=27</a>
+    </div>
+    <script>
+      const usp = new URLSearchParams(location.search);
+
+      let obj = {};
+      for (const [k, v] of usp.entries()) {
+        obj[k] = v;
+      }
+      info.innerHTML = JSON.stringify(obj, null, 4);
+    </script>
+  </body>
+</html>

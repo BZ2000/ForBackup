@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery01</title>
+
+</head>
+<body>
+    <!-- HTML -->
+     <h1 id="titile" style="color:red;"><a href="">Monday</a></h1>
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    
+    <script>
+        // $(document).ready{function(){
+
+        // }};
+        $(function(){
+            //取得ID為titile的元素的html內容
+            console.log($("#titile").html());
+            $("#titile").html("Friday <a href=''>Monday</a>")
+            // document.getElementById('title').innerHTML="XXX"
+        })
+        // $("#my-id").css("color","red");
+    </script>
+
+
+
+</body>
+</html>

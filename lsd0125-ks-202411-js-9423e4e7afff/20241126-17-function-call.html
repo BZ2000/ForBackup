@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function f1() {}
+
+      f1(1, 2, 3); // 沒錯誤
+
+      // 傳統的定義方式, 函式名稱會變成 window 的方法
+      console.log(window.f1);
+
+      const f2 = function (p1, p2) {
+        // 沒有給參數時, 會拿到 undefined
+        console.log({ p1, p2 });
+      };
+
+      f2(12);
+    </script>
+  </body>
+</html>

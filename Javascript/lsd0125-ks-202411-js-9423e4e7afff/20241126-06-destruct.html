@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script>
+      const p1 = { name: "David", age: 27, gender: "男生" };
+      // destruct, 解構賦值
+
+      // const { name } = { name: "David", age: 27, gender: "男生" };
+      const { name, age } = p1; // 解構賦值, 解開
+      console.log(name);
+      console.log({ name }); // 包裝成物件, 組合
+
+      const p2 = p1; // 設定參照
+
+      // 展開複製, 淺層複製, 單層複製
+      const p3 = { ...p1 }; // 展開運算子, spread operator
+      p1.name = "Bill";
+      console.log({ p1, p2, p3 });
+
+      const p4 = { ...p1, age: 35 }; // 展開複製後變更某個屬性
+      console.log(p4);
+    </script>
+  </body>
+</html>

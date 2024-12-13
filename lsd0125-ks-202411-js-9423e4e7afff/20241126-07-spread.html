@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script>
+      const p1 = {
+        name: {
+          first: "John",
+          last: "Wick",
+        },
+        age: 27,
+        gender: "男生",
+      };
+
+      // 展開複製, 淺層複製, 單層複製
+      const p2 = { ...p1 };
+      const p3 = structuredClone(p1); // 深層複製, 比較少用
+
+      p2.name.last = "Doe";
+      p2.age = 50;
+
+      console.log({ p1, p2, p3 });
+    </script>
+  </body>
+</html>

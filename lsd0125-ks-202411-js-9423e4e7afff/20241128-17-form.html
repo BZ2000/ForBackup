@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="form1" method="post" enctype="multipart/form-data">
+      <label for="account">帳號</label>
+      <input type="text" id="account" name="account" placeholder="帳號" /><br />
+      <label>密碼</label>
+      <input type="password" name="password" placeholder="密碼" /><br />
+
+      <div>
+        <label>
+          <input type="checkbox" name="hobby" value="1" checked />跑步
+        </label>
+        <label>
+          <input type="checkbox" name="hobby" value="2" checked />游泳
+        </label>
+        <label> <input type="checkbox" name="hobby" value="3" />腳踏車 </label>
+      </div>
+      <br />
+      <div>
+        <label>
+          <!--  相同的 name 表示相同的 radio button group -->
+          <input type="radio" name="hobby2" value="1" />跑步
+        </label>
+        <label>
+          <input type="radio" name="hobby2" value="2" checked />游泳
+        </label>
+        <label> <input type="radio" name="hobby2" value="3" />腳踏車 </label>
+      </div>
+      <br />
+      <div>
+        <select name="combo">
+          <option value="1">跑步</option>
+          <option value="2">游泳</option>
+          <option value="3" selected>腳踏車</option>
+        </select>
+      </div>
+      <br>
+      <input type="submit" />
+    </form>
+
+    <script>
+      /*
+      document.form1.combo
+      document.form1.combo.value
+      document.form1.combo.value = '2'
+
+      document.form1.hobby2 // RadioNodeList
+      document.form1.hobby2.value
+      document.form1.hobby2.value = 3
+
+      // checkbox
+      document.form1.hobby // RadioNodeList
+      document.form1.hobby.value // 不能這樣用
+
+      // checkbox 取值
+      document.form1.hobby.forEach(v=>{
+        if(v.checked){
+          console.log(v.value)
+        }
+      })
+      */
+    </script>
+  </body>
+</html>

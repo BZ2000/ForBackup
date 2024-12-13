@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script>
+      let a, b, c, d;
+
+      a = (b = 3) || (c = 6);
+
+      console.log(a, b, c); // 3, 3, undefined
+
+      d = d || 8;  // 如果 d 是 falsy, 就設定預設值
+      console.log(d); // 8
+    </script>
+  </body>
+</html>

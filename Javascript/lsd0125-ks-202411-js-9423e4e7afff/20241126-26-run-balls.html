@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: rgb(248, 232, 232);
+        border: 1px solid black;
+      }
+      .ball {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(245, 52, 52);
+        color: white;
+        font-weight: 800;
+        line-height: 50px;
+        text-align: center;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rect">
+      <div class="ball" style="left: 0px; top: 0px">1</div>
+      <div class="ball" style="left: 0px; background-color: green; top: 100px">
+        2
+      </div>
+      <div class="ball" style="left: 0px; background-color: blue; top: 200px">
+        3
+      </div>
+    </div>
+
+    <script>
+      const balls = document.querySelectorAll(".ball");
+
+      const runClock = () => {
+        balls.forEach((b) => {
+          let x = parseInt(b.style.left); // 水平位置的數值
+          let y = parseInt(b.style.top); // 垂直位置的數值
+          x += 2 + parseInt(Math.random() * 4);
+          y += parseInt(Math.random() * 5) - 2;
+          b.style.left = `${x}px`;
+          b.style.top = `${y}px`;
+        });
+        setTimeout(runClock, 30);
+      };
+      runClock();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: white;
+        border: 1px solid black;
+      }
+      .ball {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(245, 52, 52);
+        color: white;
+        font-weight: 800;
+        line-height: 50px;
+        text-align: center;
+        border: 1px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rect"></div>
+    <script>
+      const rect = document.querySelector(".rect");
+
+      const ballNum = 12;
+      const angUnit = (2 * Math.PI) / ballNum;
+
+      for (let i = 0; i < ballNum; i++) {
+        const b = document.createElement("div");
+        b.className = "ball"; // 使用 className
+        b.innerHTML = i + 1;
+        const x = 400 - 25 + 260 * Math.cos(angUnit * i - Math.PI / 3);
+        const y = 300 - 25 + 260 * Math.sin(angUnit * i - Math.PI / 3);
+        b.style.left = `${x}px`;
+        b.style.top = `${y}px`;
+
+        rect.append(b);
+      }
+    </script>
+  </body>
+</html>

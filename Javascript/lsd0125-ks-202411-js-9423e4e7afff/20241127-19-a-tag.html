@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      <a href="https://tw.yahoo.com" onclick="myClick(event)">tw.yahoo.com</a>
+    </p>
+    <p>
+      <a href="https://tw.yahoo.com" onclick="return false">tw.yahoo.com</a>
+    </p>
+    <p>
+      <a href="https://tw.yahoo.com" onclick="return confirm(`是否要前往 yahoo ?`)">tw.yahoo.com</a>
+    </p>
+
+    <form onsubmit="event.preventDefault()">
+      <input type="text" name="account" placeholder="帳號" /><br />
+      <input type="password" name="password" placeholder="密碼" /><br />
+      <input type="submit" />
+    </form>
+
+    <script>
+      const myClick = (e) => {
+        e.preventDefault(); // 避免預設的行為
+        console.log("A");
+      };
+    </script>
+  </body>
+</html>

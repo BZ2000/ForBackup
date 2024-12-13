@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      b {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script src="./data/products1.js"></script>
+    <script>
+      const products2 = [...products1];
+
+      products2.sort(function (a, b) {
+        return a.price - b.price; // 價格升冪排序
+      });
+
+      for (let item of products2) {
+        const { bookname, price } = item;
+        console.log({ bookname, price });
+      }
+    </script>
+  </body>
+</html>

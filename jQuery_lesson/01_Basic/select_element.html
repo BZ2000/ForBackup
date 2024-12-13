@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習選擇元素</title>
+</head>
+<body>
+    <h1>歡迎來上好玩的jQuery課程</h1>
+    <p>今天天氣很好</p>
+    <p>jQuery超好玩</p>
+    <ul id="Menu">
+        <li>蛋糕</li>
+        <li>麵包</li>
+        <li>義大利麵</li>
+        <li>甜點</li>
+        <li>牛排</li>
+    </ul>
+    
+    <input type="text" value="我是輸入框">
+    <input name="Phone" type="text" value="0988123456">
+    <img src="" alt="" class="pic">
+    <div>
+        <p>A
+            <div>
+                <a href="">
+                    <p>B</p>
+                </a>
+            </div>
+        </p>
+        <p>C</p>
+        <p>D</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // 選取h1並使用console.log顯示元素
+            
+            console.log($('h1').text())
+            // 選取Menu並使用console.log顯示元素
+            console.log($('#Menu').html())
+            // 選取Menu li 並使用console.log顯示元素
+            console.log($('#Menu li:nth-child(3)').html());
+            // 選取p並使用console.log顯示元素
+            console.log($('p:nth-child(3)').html());
+            
+            console.log($('p'));
+            // 選取input並使用console.log顯示元素
+            console.log($('input[name="Phone"]').val());
+            $('div p').css("font-size","30px");
+            $('div>p').css("color","red");
+        });
+    </script>
+</body>
+</html>

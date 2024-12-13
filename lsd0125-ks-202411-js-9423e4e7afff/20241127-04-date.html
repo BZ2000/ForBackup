@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info"></div>
+    <script>
+      const now = new Date(); // 當下時間
+
+      info.innerText += now + "\n";
+      info.innerText += now.toString() + "\n";
+      info.innerText += now.toJSON() + "\n";
+      info.innerText += now.toISOString() + "\n";
+      info.innerText += now.getFullYear() + "\n";
+      info.innerText += `getMonth(): ${now.getMonth()}\n`; // 拿到的是月份的索引
+      info.innerText += `getDate(): ${now.getDate()}\n`;
+      info.innerText += `getDay(): ${now.getDay()}\n`; // 星期幾的索引, 0 是 sunday
+      info.innerText += now.toDateString() + "\n";
+      info.innerText += now.toLocaleString() + "\n";
+
+
+    </script>
+  </body>
+</html>

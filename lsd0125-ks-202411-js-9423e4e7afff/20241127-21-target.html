@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: rgb(248, 232, 232);
+        border: 1px solid black;
+      }
+      .ball {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(245, 52, 52);
+        color: white;
+        line-height: 50px;
+        text-align: center;
+        border: 1px solid black;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rect"></div>
+    <script>
+      const rect = document.querySelector(".rect");
+
+      rect.addEventListener("click", (e) => {
+        console.log(e.target); // 事件的來源, 事件是從哪一個元素發生的
+        console.log(e.currentTarget); // 註冊事件處理器的對象
+      });
+
+      for (let i = 0; i < 10; i++) {
+        const b = document.createElement("div");
+        b.innerHTML = i % 2 ? `<b>${i}</b>` : i;
+        b.className = "ball"; // 使用 className
+        b.style.left = i * 60 + "px";
+        b.style.top = "20px";
+
+        rect.append(b);
+      }
+    </script>
+  </body>
+</html>

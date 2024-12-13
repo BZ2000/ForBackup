@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img_banner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <style>
+        img{
+            width:80%;
+            margin:auto;
+        }
+        .card{
+            width:800px;
+            height:500px;
+            position:absolute;
+            top:-500px;
+            left: calc((100%-800px)/2);
+            background-color: aqua;
+            text-align: center;
+            font-size: 50px;
+            transition:all 0.4s;
+        }
+        .card img{
+            width:auto;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="imgs/christmas-lights.png" alt="">
+        <h2>聖誕快樂!!</h2>
+    </div>
+    <p>測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字測試文字</p>
+    <img src="imgs/banner1.jpg" alt="">
+    <img src="imgs/banner2.jpg" alt="">
+    <img src="imgs/banner3.jpg" alt="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            console.log("文件載入完成");
+        })
+        $(window).on("load",function(){
+            console.log("圖片載入完成");
+        })
+        //當視窗寬度小於1024，背景色變成黃色
+        let viewport=$(window).width();
+        console.log(viewport)
+        
+            
+        
+        $(window).on("resize",function(){
+            viewport=$(window).width();
+            if(viewport<=1024){
+                $('body').css("background","pink)");
+            }else{
+                $('body').css("background","white)");
+            }})
+        //當滾動到800px，alert訊息
+        $(window).on("scroll",function(){
+            let pos=$(window).scrollTop();
+            console.log('pos',pos)
+            if(pos>=500){
+                console.log("滾動位置:"+("pos",pos));
+                $('.card').css("transform","translateY(1200px)");
+            }
+        })
+        
+    </script>
+</body>
+</html>

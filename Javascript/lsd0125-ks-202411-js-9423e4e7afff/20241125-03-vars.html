@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ES5 嚴謹模式, 使用的變數一定要宣告
+      "use strict";
+      var a = 10;
+
+      // alert 變數, 會蓋掉原本的 alert() 的功能
+      var alert = "不要這樣用, 不要用到內建 (DOM) 的識別字";
+      console.log(alert);
+      console.warn(alert);
+      console.error(alert);
+    </script>
+  </body>
+</html>

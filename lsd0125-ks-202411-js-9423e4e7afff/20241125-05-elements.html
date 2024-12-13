@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info">1</div>
+    <!--
+    <div id="info">Hi</div>
+    -->
+
+    <div class="info2">2</div>
+    <p class="info3">3</p>
+    <!-- HTML 結構的問題不會造成 JS 的錯誤 -->
+    <div>bad
+    <script>
+      let el = document.getElementById("info"); // 用 id 取得元素
+      el.innerHTML = "<h2>您好</h2>";
+
+      console.log(info); // 元素的 id (只有一個時, 會自動變成 window 的屬性)
+    </script>
+  </body>
+</html>

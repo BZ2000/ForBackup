@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .mark {
+        color: red;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script>
+      const str = "大聯盟官網大讚：歷史最偉大爆冷";
+      console.log(str.split("大")); // 切割字串
+
+      info.innerHTML = `${str}<br>`;
+      info.innerHTML += `${str.split("大")}<br>`;
+      // 取代掉字串裡的詞(子字串)
+      info.innerHTML += `${str.split("大").join("小")}<br>`;
+      // 用空字串切, 會是每個字元分開來
+      info.innerHTML += `${str.split("").join("~")}<br>`;
+      // 用 html/css 標示文字
+      info.innerHTML += `${str
+        .split("大")
+        .join("<span class='mark'>大</span>")}<br>`;
+    </script>
+  </body>
+</html>
