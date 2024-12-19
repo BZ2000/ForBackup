@@ -12,6 +12,10 @@
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./css/style.css">
 <style>
+    .h3 {
+        font-size: 50px;
+
+    }
 </style>
 
 <body>
@@ -66,11 +70,242 @@
             </nav>
             <!--從這裡開始插入內容-->
             <div>
-                <h2>從這裡開始插入內容</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione voluptates ex modi blanditiis
-                    voluptatibus earum distinctio esse reiciendis, adipisci dicta sint, quod nobis aspernatur
-                    repudiandae?
-                    Quod impedit vel culpa nam.</p>
+                <div class="py-4 mb-4 mb-lg-10" style="background-color: var(--bs-secondary-bg);">
+                    <div class="container d-lg-flex justify-content-between align-items-center py-2 py-lg-4">
+                        <div class="pe-lg-4 text-center text-lg-start">
+                            <h1 class="h3 mb-0">購物車清單</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mb-4 mb-lg-10">
+                    <div class="row g-4 g-lg-10">
+                        <div class="col-lg-8">
+                            <div class="border rounded-3 p-4">
+                                <!-- Product -->
+                                <div class="row align-items-center pb-4">
+                                    <div class="col-12 col-md-auto">
+                                        <a href="#">
+                                            <img class="d-block mx-auto" width="120"
+                                                src="assets/img/product-card/product-beats-earphones.png" alt="Product">
+                                        </a>
+                                    </div>
+                                    <div class="col-12 col-md text-center text-md-start">
+                                        <h6 class="mb-0">
+                                            <a href="#" class="link-accent link-hover-primary"> Beats Studio Buds </a>
+                                        </h6>
+                                        <span class="d-block fs-sm">Earphones</span>
+                                        <span class="d-block text-danger">$149</span>
+                                    </div>
+                                    <div class="col-12 col-md-auto">
+                                        <div class="mt-3 mt-md-0 quantity-products d-flex justify-content-center">
+                                            <button class="quantity-btn-minus"><i class="ri-subtract-line"></i></button>
+                                            <input id="quantityNumber1" class="quantity-number" type="number" value="1">
+                                            <button class="quantity-btn-plus"><i class="ri-add-line"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-auto">
+                                        <button
+                                            class="btn btn-link text-danger d-flex align-items-center px-0 pe-md-3 mx-auto"
+                                            type="button">
+                                            <i class="ri-close-circle-line fs-5 me-2"></i>
+                                            <span>Remove</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr class="mb-4">
+                                <!-- Product -->
+                                <!-- Product -->
+                                <div class="row align-items-center pb-4">
+                                    <div class="col-12 col-md-auto">
+                                        <a href="#">
+                                            <img class="d-block mx-auto" width="120"
+                                                src="assets/img/product-card/product-kardon-speaker.png" alt="Product">
+                                        </a>
+                                    </div>
+                                    <div class="col-12 col-md text-center text-md-start">
+                                        <h6 class="mb-0">
+                                            <a href="#" class="link-accent link-hover-primary"> Harman Kardon Onyx </a>
+                                        </h6>
+                                        <span class="d-block fs-sm">Speakers</span>
+                                        <span class="d-block text-danger">$249</span>
+                                    </div>
+                                    <div class="col-12 col-md-auto">
+                                        <div class="mt-3 mt-md-0 quantity-products d-flex justify-content-center">
+                                            <button class="quantity-btn-minus"><i class="ri-subtract-line"></i></button>
+                                            <input id="quantityNumber2" class="quantity-number" type="number" value="1">
+                                            <button class="quantity-btn-plus"><i class="ri-add-line"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-auto">
+                                        <button
+                                            class="btn btn-link text-danger d-flex align-items-center px-0 pe-md-3 mx-auto"
+                                            type="button">
+                                            <i class="ri-close-circle-line fs-5 me-2"></i>
+                                            <span>Remove</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr class="mb-4">
+                                <!-- Product -->
+                                <!-- Product -->
+                                <div class="row align-items-center pb-4">
+                                    <div class="col-12 col-md-auto">
+                                        <a href="#">
+                                            <img class="d-block mx-auto" width="120"
+                                                src="assets/img/product-card/product-xiaomi-redmi.png" alt="Product">
+                                        </a>
+                                    </div>
+                                    <div class="col-12 col-md text-center text-md-start">
+                                        <h6 class="mb-0">
+                                            <a href="#" class="link-accent link-hover-primary"> Xiaomi Redmi 10 </a>
+                                        </h6>
+                                        <span class="d-block fs-sm">Smartphones</span>
+                                        <span class="d-block text-danger">$199</span>
+                                    </div>
+                                    <div class="col-12 col-md-auto">
+                                        <div class="mt-3 mt-md-0 quantity-products d-flex justify-content-center">
+                                            <button class="quantity-btn-minus"><i class="ri-subtract-line"></i></button>
+                                            <input id="quantityNumber3" class="quantity-number" type="number" value="1">
+                                            <button class="quantity-btn-plus"><i class="ri-add-line"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-auto">
+                                        <button
+                                            class="btn btn-link text-danger d-flex align-items-center px-0 pe-md-3 mx-auto"
+                                            type="button">
+                                            <i class="ri-close-circle-line fs-5 me-2"></i>
+                                            <span>Remove</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr class="mb-4">
+                                <!-- Product -->
+                                <!-- Product -->
+                                <div class="row align-items-center pb-4">
+                                    <div class="col-12 col-md-auto">
+                                        <a href="#">
+                                            <img class="d-block mx-auto" width="120"
+                                                src="assets/img/product-card/product-apple-watch.png" alt="Product">
+                                        </a>
+                                    </div>
+                                    <div class="col-12 col-md text-center text-md-start">
+                                        <h6 class="mb-0">
+                                            <a href="#" class="link-accent link-hover-primary"> Apple Watch 7 </a>
+                                        </h6>
+                                        <span class="d-block fs-sm">Smartwatch</span>
+                                        <span class="d-block text-danger">$299</span>
+                                    </div>
+                                    <div class="col-12 col-md-auto">
+                                        <div class="mt-3 mt-md-0 quantity-products d-flex justify-content-center">
+                                            <button class="quantity-btn-minus"><i class="ri-subtract-line"></i></button>
+                                            <input id="quantityNumber4" class="quantity-number" type="number" value="1">
+                                            <button class="quantity-btn-plus"><i class="ri-add-line"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-auto">
+                                        <button
+                                            class="btn btn-link text-danger d-flex align-items-center px-0 pe-md-3 mx-auto"
+                                            type="button">
+                                            <i class="ri-close-circle-line fs-5 me-2"></i>
+                                            <span>Remove</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr class="mb-4">
+                                <!-- Product -->
+                                <!-- Form -->
+                                <div class="row g-4">
+                                    <div class="col-auto">
+                                        <div class="input-group">
+                                            <input id="promoCode1" type="text" class="form-control"
+                                                placeholder="Promo code" required="" aria-describedby="button-promo">
+                                            <button class="btn btn-primary" type="button"
+                                                id="button-promo">Apply</button>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <button class="btn btn-outline-accent d-block ms-sm-auto" type="submit">Update
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Form -->
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card border" style="background-color: var(--bs-secondary-bg);">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h4>總額</h4>
+                                        <h4>$949.00</h4>
+                                    </div>
+                                    <hr class="mb-4">
+                                    <h6>配送地址</h6>
+                                    <form class="needs-validation" novalidate="">
+                                        <div class="mb-4">
+                                            <label class="form-label" for=" shipping-city">城市：</label>
+                                            <select class="form-select" required="" id=" shipping-city">
+                                                <option value="">請選擇居住地</option>
+                                                <option value="Keelung">基隆市</option>
+                                                <option value="Taipei">台北市</option>
+                                                <option value="NewTaipei">新北市</option>
+                                                <option value="Taoyuan">桃園縣</option>
+                                                <option value="Hsinchu">新竹縣</option>
+                                                <option value="Miaoli">苗栗縣</option>
+                                                <option value="Taichung">台中市</option>
+                                                <option value="Changhua">彰化縣</option>
+                                                <option value="Nantou">南投縣</option>
+                                                <option value="Yunlin">雲林縣</option>
+                                                <option value="Chiayi">嘉義縣</option>
+                                                <option value="Tainan">台南市</option>
+                                                <option value="Kaohsiung">高雄市</option>
+                                                <option value="Pingtung">屏東縣</option>
+                                                <option value="Taitung">台東縣</option>
+                                                <option value="Hualien">花蓮縣</option>
+                                                <option value="Yilan">宜蘭縣</option>
+                                                <option value="Penghu">澎湖縣</option>
+                                                <option value="Kinmen">金門縣</option>
+                                                <option value="Lienchiang">連江縣</option>
+                                                <option value="GreenIsland">綠島</option>
+                                                <option value="Lanyu">蘭嶼</option>
+                                                <option value="Matsu">馬祖</option>
+                                            </select>
+                                            <div class="invalid-feedback">尚未選擇居住地城市!!</div>
+                                        </div>
+                                        <div class="mb-4">
+                                            <label class="form-label" for=" shipping-area">轄區：</label>
+                                            <select class="form-select" required="" id=" shipping-area">
+                                                <option value="">請選擇轄區</option>
+                                                <option value="">Choose your region</option>
+                                                <option value="">Choose your region</option>
+                                                <option value="">Choose your region</option>
+                                                <option value="">Choose your region</option>
+                                                <option value="">Choose your region</option>
+                                                <option value="">Choose your region</option>
+                                                <option value="">Choose your region</option>
+                                                <option value="">Choose your region</option>
+                                            </select>
+                                            <div class="invalid-feedback">Please choose your country!</div>
+                                        </div>
+                                        <div class="mb-4">
+                                            <label class="form-label" for="shipping-zip">Zip / Postal
+                                                Code<span>*</span></label>
+                                            <input class="form-control" type="text" placeholder="" required=""
+                                                id="shipping-zip">
+                                            <div class="invalid-feedback">Please provide a valid zip!</div>
+                                        </div>
+                                        <hr class="mb-4">
+                                        <div class="mb-4">
+                                            <label class="form-label" for="shipping-note">Note for the seller</label>
+                                            <textarea class="form-control" rows="4" id="shipping-note"></textarea>
+                                        </div>
+                                        <button class="btn btn-primary btn-shadow d-block w-100"
+                                            type="submit">Checkout</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
