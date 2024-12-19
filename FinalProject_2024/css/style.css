@@ -288,11 +288,13 @@ h1 {
     font-size: 26px;
     color: #8D8266;
 }
-.form-control-login{
-  border: 1px solid white;
-  font-size: 18px;
-  width: 100%;
+
+.form-control-login {
+    border: 1px solid white;
+    font-size: 18px;
+    width: 100%;
 }
+
 .custom-input {
     border: none;
     border-bottom: 1px solid #8D8266;
@@ -383,246 +385,271 @@ a.text-end:visited {
 /*購物車側邊欄*/
 
 .image-container {
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .cart-card-img {
-  max-height: 100%; 
-  max-width: 100%; 
-  margin: auto; 
-  display: block; 
-  object-fit: contain; 
-  object-position: center; 
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: block;
+    object-fit: contain;
+    object-position: center;
 }
 
 .card-title {
-  font-size: 16px;
+    font-size: 16px;
 }
 
-.card-price{
-  font-size: 14px;
-  margin-block-end:0px !important;
+.card-price {
+    font-size: 14px;
+    margin-block-end: 0px !important;
 }
 
-.card-body{
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  flex-direction: column;
+.card-body {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
 }
 
 .card-text small {
-  font-size: 0.875rem; 
-  color: #6c757d;
+    font-size: 0.875rem;
+    color: #6c757d;
 }
 
 .btn-outline-primary {
-  color: #333;
-  border:1px solid white;
-  transition: all 0.2s ease-in-out;
+    color: #333;
+    border: 1px solid white;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-outline-primary:hover {
-  color: #fff;
-  background-color: #ffffff;
-  border-color: #ffffff;
+    color: #fff;
+    background-color: #ffffff;
+    border-color: #ffffff;
 }
 
 .btn-outline-primary:active {
-  transform: scale(0.95);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  background-color: #eaeaea !important;
-  border-color: #ddd !important;
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    background-color: #eaeaea !important;
+    border-color: #ddd !important;
 }
 
 /*+-*/
 .ctrl {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 95%;
-  max-width: 180px; 
-  height: 35px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    max-width: 180px;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
 }
+
 .ctrl__counter {
-  position: relative;
-  width: 200px;
-  height: 100px;
-  color: #333C48;
-  text-align: center;
-  overflow: hidden;
+    position: relative;
+    width: 200px;
+    height: 100px;
+    color: #333C48;
+    text-align: center;
+    overflow: hidden;
 }
+
 .ctrl__counter.is-input .ctrl__counter-num {
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 100ms ease-in;
-  transition: opacity 100ms ease-in;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
 }
+
 .ctrl__counter.is-input .ctrl__counter-input {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: opacity 100ms ease-in;
-  transition: opacity 100ms ease-in;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
 }
+
 .ctrl__counter-input {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 2;
-  box-shadow: none;
-  outline: none;
-  border: none;
-  color: #333C48;
-  font-size: 30px;
-  line-height: 100px;
-  text-align: center;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 100ms ease-in;
-  transition: opacity 100ms ease-in;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    color: #333C48;
+    font-size: 30px;
+    line-height: 100px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
 }
 
 .ctrl__button {
-  flex: 0 0 30px;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
-  background-color: #8498a7;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 150ms ease-in, transform 100ms ease-in;
+    flex: 0 0 30px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #8498a7;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 150ms ease-in, transform 100ms ease-in;
 }
+
 .ctrl__button:hover {
-  background-color: #90a2b0;
+    background-color: #90a2b0;
 }
+
 .ctrl__button:active {
-  background-color: #778996;
+    background-color: #778996;
 }
-.ctrl__button--decrement { border-radius: 5px 0 0 5px; }
-.ctrl__button--increment { border-radius: 0 5px 5px 0; }
+
+.ctrl__button--decrement {
+    border-radius: 5px 0 0 5px;
+}
+
+.ctrl__button--increment {
+    border-radius: 0 5px 5px 0;
+}
 
 
 .ctrl__counter-num {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  line-height: 100px;
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: opacity 100ms ease-in;
-  transition: opacity 100ms ease-in;
-}
-.ctrl__counter-num.is-increment-hide {
-  opacity: 0;
-  -webkit-transform: translateY(-50px);
-  transform: translateY(-50px);
-  -webkit-animation: increment-prev 100ms ease-in;
-  animation: increment-prev 100ms ease-in;
-}
-.ctrl__counter-num.is-increment-visible {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-animation: increment-next 100ms ease-out;
-  animation: increment-next 100ms ease-out;
-}
-.ctrl__counter-num.is-decrement-hide {
-  opacity: 0;
-  -webkit-transform: translateY(50px);
-  transform: translateY(50px);
-  -webkit-animation: decrement-prev 100ms ease-in;
-  animation: decrement-prev 100ms ease-in;
-}
-.ctrl__counter-num.is-decrement-visible {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-animation: decrement-next 100ms ease-out;
-  animation: decrement-next 100ms ease-out;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 100px;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
 }
 
-@-webkit-keyframes 
-decrement-prev {  from {
-opacity: 1;
--webkit-transform: translateY(0);
-transform: translateY(0);
+.ctrl__counter-num.is-increment-hide {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    -webkit-animation: increment-prev 100ms ease-in;
+    animation: increment-prev 100ms ease-in;
 }
+
+.ctrl__counter-num.is-increment-visible {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation: increment-next 100ms ease-out;
+    animation: increment-next 100ms ease-out;
 }
-@keyframes 
-decrement-prev {  from {
-opacity: 1;
--webkit-transform: translateY(0);
-transform: translateY(0);
+
+.ctrl__counter-num.is-decrement-hide {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    -webkit-animation: decrement-prev 100ms ease-in;
+    animation: decrement-prev 100ms ease-in;
 }
+
+.ctrl__counter-num.is-decrement-visible {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation: decrement-next 100ms ease-out;
+    animation: decrement-next 100ms ease-out;
 }
-@-webkit-keyframes 
-decrement-next {  from {
-opacity: 0;
--webkit-transform: translateY(-50px);
-transform: translateY(-50px);
+
+@-webkit-keyframes decrement-prev {
+    from {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
 }
+
+@keyframes decrement-prev {
+    from {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
 }
-@keyframes 
-decrement-next {  from {
-opacity: 0;
--webkit-transform: translateY(-50px);
-transform: translateY(-50px);
+
+@-webkit-keyframes decrement-next {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
 }
+
+@keyframes decrement-next {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
 }
-@-webkit-keyframes 
-increment-prev {  from {
-opacity: 1;
--webkit-transform: translateY(0);
-transform: translateY(0);
+
+@-webkit-keyframes increment-prev {
+    from {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
 }
+
+@keyframes increment-prev {
+    from {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
 }
-@keyframes 
-increment-prev {  from {
-opacity: 1;
--webkit-transform: translateY(0);
-transform: translateY(0);
+
+@-webkit-keyframes increment-next {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+    }
 }
-}
-@-webkit-keyframes 
-increment-next {  from {
-opacity: 0;
--webkit-transform: translateY(50px);
-transform: translateY(50px);
-}
-}
-@keyframes 
-increment-next {  from {
-opacity: 0;
--webkit-transform: translateY(50px);
-transform: translateY(50px);
-}
+
+@keyframes increment-next {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+    }
 }
 
 /*----------------------------------*/
 .btn-outline-primary:focus {
-  outline: none;
+    outline: none;
 }
 
 .form-control {
-  border: 1px solid white;
-  font-size: 18px;
-  width: 50px;
-  text-align: center;
+    border: 1px solid white;
+    font-size: 18px;
+    width: 50px;
+    text-align: center;
 }
 
-.text-primary{
-  font-family: LXGW WenKai Mono TC, Tahoma, sans-serif !important;
-  font-size: 22px !important;
-  color: #8D8266 !important;
+.text-primary {
+    font-family: LXGW WenKai Mono TC, Tahoma, sans-serif !important;
+    font-size: 22px !important;
+    color: #8D8266 !important;
 }
+
+h3 {}
