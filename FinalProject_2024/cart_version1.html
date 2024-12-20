@@ -15,6 +15,12 @@
     .h3 {
         font-size: 50px;
     }
+
+    .h6,
+    .h4,
+    .shipping-detail {
+        font-size: 25px;
+    }
 </style>
 
 <body>
@@ -238,7 +244,7 @@
                                         <h4>$949.00</h4>
                                     </div>
                                     <hr class="mb-4">
-                                    <h6>配送地址</h6>
+                                    <h6 class="shipping-detail">配送地址</h6>
                                     <form class="needs-validation" novalidate="">
                                         <div class="mb-4">
                                             <label class="form-label" for=" shipping-city">城市：</label>
@@ -268,7 +274,7 @@
                                                 <option value="Lanyu">蘭嶼</option>
                                                 <option value="Matsu">馬祖</option>
                                             </select>
-                                            <div class="invalid-feedback">尚未選擇居住地城市!!</div>
+                                            <div class="invalid-feedback">地址填寫不完全</div>
                                         </div>
                                         <div class="mb-4">
                                             <label class="form-label" for=" shipping-area">轄區：</label>
@@ -283,7 +289,18 @@
                                                 <option value="">Choose your region</option>
                                                 <option value="">Choose your region</option>
                                             </select>
-                                            <div class="invalid-feedback">Please choose your country!</div>
+                                            <div class="invalid-feedback">地址填寫不完全</div>
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="shipping-customer-address" class="formlabel">詳細地址</label></br>
+                                            <input type="text" class="shipping-customer-address"></br>
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="" class="formlabel shipping-detail">收貨人資料:</label></br>
+                                            <label for="shipping-customer-name" class="formlabel">姓名</label></br>
+                                            <input type="text" class="shipping-customer-name"></br>
+                                            <label for="shipping-customer-phone" class="formlabel">電話</label></br>
+                                            <input type="text" class="shipping-customer-phone"></br>
                                         </div>
                                         <div class="mb-4">
                                             <label class="form-label" for="shipping-zip">Zip / Postal
