@@ -18,8 +18,30 @@
 
     .h6,
     .h4,
-    .shipping-detail {
+    .shipping-zip {
         font-size: 25px;
+    }
+
+    .large-checkbox {
+        width: 15px;
+        /* 設定寬度 */
+        height: 15px;
+        /* 設定高度 */
+        transform: scale(1.2);
+        /* 放大比例 */
+        margin-right: 5px;
+        /* 調整與文字間距 */
+        margin-left: 10px;
+    }
+
+    .large-textbox {
+        width: 350px;
+    }
+
+    .small-textbox {
+        width: 50px;
+        text-align: center;
+        margin-top: 7px;
     }
 </style>
 
@@ -244,74 +266,26 @@
                                         <h4>$949.00</h4>
                                     </div>
                                     <hr class="mb-4">
-                                    <h6 class="shipping-detail">配送地址</h6>
+                                    <div class="mb-4">
+                                        <label for="" class="formlabel shipping-detail">收貨人資料:</label></br>
+                                        <label for="shipping-customer-name" class="formlabel">姓名</label></br>
+                                        <input type="text" class="shipping-customer-name"></br>
+                                        <label for="shipping-customer-phone" class="formlabel">電話</label></br>
+                                        <input type="text" class="shipping-customer-phone">
+                                    </div>
+                                    <h6 class="shipping-detail">配送地址:</h6>
                                     <form class="needs-validation" novalidate="">
                                         <div class="mb-4">
-                                            <label class="form-label" for=" shipping-city">城市：</label>
-                                            <select class="form-select" required="" id=" shipping-city">
-                                                <option value="">請選擇居住地</option>
-                                                <option value="Keelung">基隆市</option>
-                                                <option value="Taipei">台北市</option>
-                                                <option value="NewTaipei">新北市</option>
-                                                <option value="Taoyuan">桃園縣</option>
-                                                <option value="Hsinchu">新竹縣</option>
-                                                <option value="Miaoli">苗栗縣</option>
-                                                <option value="Taichung">台中市</option>
-                                                <option value="Changhua">彰化縣</option>
-                                                <option value="Nantou">南投縣</option>
-                                                <option value="Yunlin">雲林縣</option>
-                                                <option value="Chiayi">嘉義縣</option>
-                                                <option value="Tainan">台南市</option>
-                                                <option value="Kaohsiung">高雄市</option>
-                                                <option value="Pingtung">屏東縣</option>
-                                                <option value="Taitung">台東縣</option>
-                                                <option value="Hualien">花蓮縣</option>
-                                                <option value="Yilan">宜蘭縣</option>
-                                                <option value="Penghu">澎湖縣</option>
-                                                <option value="Kinmen">金門縣</option>
-                                                <option value="Lienchiang">連江縣</option>
-                                                <option value="GreenIsland">綠島</option>
-                                                <option value="Lanyu">蘭嶼</option>
-                                                <option value="Matsu">馬祖</option>
-                                            </select>
+                                            <input type="text" class="shipping-customer-address large-textbox"></br>
+                                            <label class="form-label" for="shipping-zip">郵遞區號
+                                                <input type="text" id="shipping-zip" class="small-textbox">
+                                            </label></br>
+                                            <input type="checkbox" id="SameAsMember" class="large-checkbox"> 同會員資料</br>
                                             <div class="invalid-feedback">地址填寫不完全</div>
-                                        </div>
-                                        <div class="mb-4">
-                                            <label class="form-label" for=" shipping-area">轄區：</label>
-                                            <select class="form-select" required="" id=" shipping-area">
-                                                <option value="">請選擇轄區</option>
-                                                <option value="">Choose your region</option>
-                                                <option value="">Choose your region</option>
-                                                <option value="">Choose your region</option>
-                                                <option value="">Choose your region</option>
-                                                <option value="">Choose your region</option>
-                                                <option value="">Choose your region</option>
-                                                <option value="">Choose your region</option>
-                                                <option value="">Choose your region</option>
-                                            </select>
-                                            <div class="invalid-feedback">地址填寫不完全</div>
-                                        </div>
-                                        <div class="mb-4">
-                                            <label for="shipping-customer-address" class="formlabel">詳細地址</label></br>
-                                            <input type="text" class="shipping-customer-address"></br>
-                                        </div>
-                                        <div class="mb-4">
-                                            <label for="" class="formlabel shipping-detail">收貨人資料:</label></br>
-                                            <label for="shipping-customer-name" class="formlabel">姓名</label></br>
-                                            <input type="text" class="shipping-customer-name"></br>
-                                            <label for="shipping-customer-phone" class="formlabel">電話</label></br>
-                                            <input type="text" class="shipping-customer-phone"></br>
-                                        </div>
-                                        <div class="mb-4">
-                                            <label class="form-label" for="shipping-zip">Zip / Postal
-                                                Code<span>*</span></label>
-                                            <input class="form-control" type="text" placeholder="" required=""
-                                                id="shipping-zip">
-                                            <div class="invalid-feedback">Please provide a valid zip!</div>
                                         </div>
                                         <hr class="mb-4">
                                         <div class="mb-4">
-                                            <label class="form-label" for="shipping-note">Note for the seller</label>
+                                            <label class="form-label" for="shipping-note">備註:</label>
                                             <textarea class="form-control" rows="4" id="shipping-note"></textarea>
                                         </div>
                                         <button class="btn btn-primary btn-shadow d-block w-100"
@@ -476,6 +450,7 @@
                 }
             });
         });
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
